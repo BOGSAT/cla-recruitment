@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="feedback" content="" />
+    <meta name="og immage" content="" />
+    <title>Sign-in page</title>
+  </head>
+  <body>
+    <section class="signincontainer">
+      <div class="codingimage">
+        <img
+          class="codingavatar"
+          src="./Images/coding.png"
+          alt="Coding avatar"
+        />
+      </div>
+      <div class="logincontainer">
+        <div class="logincart">
+          <h2 class="headercoder">Join Coder Now!</h2>
+          <input class="email" type="email" placeholder=" Email" name="email" />
+          <input
+            class="password"
+            type="password"
+            placeholder=" Password"
+            name="password"
+          />
+          <input
+            class="signinbutton"
+            type="submit"
+            name="sign in"
+            value="Login"
+          />
+          <p class="signuplink">
+            New to CodeCLA? <a href="/signup.html">Signup</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .signincontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 5px;
+        width: 100%;
+        grid-template-areas: "codingimage logincontainer";
+        height: 100%;
+        background-image: url("/Images/bg.svg");
+        font-family: Martel Sans, sans-serif;
+        background-color: #f4f4f4;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        border-top-color: #23155b;
+        border-right-color: #f4f4f4;
+        border-bottom-color: #f4f4f4;
+        border-style: solid;
+      }
+
+      .codingimage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #23155b;
+        height: 690px;
+      }
+      .codingavatar {
+        height: 275px;
+      }
+
+      .logincontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+      }
+
+      .logincart {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        height: 350px;
+        width: 350px;
+        padding: 10px 10px 10px 10px;
+      }
+
+      .headercoder {
+        color: #8053ff;
+      }
+
+      .email {
+        background-color: #23155b;
+        width: 90%;
+        height: 40px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+
+      .password {
+        background-color: #23155b;
+        width: 90%;
+        height: 40px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+
+      .signinbutton {
+        background-color: #8053ff;
+        width: 92%;
+        height: 35px;
+        border-radius: 5px;
+        color: white;
+      }
+    </style>
+  </body>
+</html>
