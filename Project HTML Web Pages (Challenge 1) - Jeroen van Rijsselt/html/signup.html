@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="feedback" content="" />
+    <meta name="og immage" content="" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8053FF",
+              bodyColor: "#23155B",
+              gray: "#f4f4f4",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Sign-up page</title>
+  </head>
+  <body>
+    <section
+      class="signup grid grid-cols-2 grid-rows-1 gap-[5px] w-full h-full bg-[url('/Images/bg.svg')] font-sans bg-gray-100 bg-no-repeat bg-fixed bg-[length:100%_100%] border-solid border-t-bodyColor border-r-gray-100 border-b-gray-100"
+    >
+      <div
+        class="codingimage flex justify-center items-center bg-bodyColor h-[690px]"
+      >
+        <img
+          class="codingavatar h-[275px]"
+          src="./Images/coding.png"
+          alt="Coding avatar"
+        />
+      </div>
+      <div
+        class="signupcontainer flex flex-col justify-center items-center pt-[5px]"
+      >
+        <div
+          class="signupcart flex flex-col justify-center items-center bg-white h-[350px] w-[350px] p-10"
+        >
+          <h2 class="headercoder text-primary">Join Coders Now!</h2>
+          <input
+            class="firstname bg-bodyColor w-[90%] h-[40px] rounded-[5px] mb-[15px]"
+            type="text"
+            placeholder="First name"
+            name="first name"
+          />
+          <input
+            class="lastname bg-bodyColor w-[90%] h-[40px] rounded-[5px] mb-[15px]"
+            type="text"
+            placeholder="Last Name"
+            name="last name"
+          />
+          <input
+            class="email bg-bodyColor w-[90%] h-[40px] rounded-[5px] mb-[15px]"
+            type="email"
+            placeholder="Email"
+            name="email"
+          />
+          <input
+            class="password bg-bodyColor w-[90%] h-[40px] rounded-[5px] mb-[15px]"
+            type="password"
+            placeholder="Password"
+            name="password"
+          />
+          <input
+            class="signupbutton bg-primary w-[92%] h-[35px] rounded-[5px] text-white"
+            type="submit"
+            name="sign up"
+            value="Sign Up"
+          />
+          <p>
+            Already have and account?
+            <a class="text-primary" href="./signin.html">Login</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
