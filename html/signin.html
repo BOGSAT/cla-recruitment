@@ -5,118 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="feedback" content="" />
     <meta name="og immage" content="" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8053FF",
+              bodyColor: "#23155B",
+              gray: "#f4f4f4",
+            },
+          },
+        },
+      };
+    </script>
     <title>Sign-in page</title>
   </head>
   <body>
-    <section class="signincontainer">
-      <div class="codingimage">
+    <section
+      class="signincontainer grid grid-cols-2 grid-rows-1 gap-[5px] w-full h-full bg-[url('/Images/bg.svg')] font-sans bg-gray-100 bg-no-repeat bg-fixed bg-[length:100%_100%] border-solid border-t-bodyColor border-r-gray-100 border-b-gray-100"
+    >
+      <div
+        class="codingimage flex justify-center items-center bg-bodyColor h-[690px]"
+      >
         <img
-          class="codingavatar"
+          class="codingavatar h-[275px]"
           src="./Images/coding.png"
           alt="Coding avatar"
         />
       </div>
-      <div class="logincontainer">
-        <div class="logincart">
-          <h2 class="headercoder">Join Coder Now!</h2>
-          <input class="email" type="email" placeholder=" Email" name="email" />
+      <div
+        class="logincontainer flex flex-col justify-center items-center pt-[5px]"
+      >
+        <div
+          class="logincart flex flex-col justify-center items-center bg-white h-[350px] w-[350px] p-10"
+        >
+          <h2 class="headercoder text-primary">Join Coder Now!</h2>
           <input
-            class="password"
+            class="email bg-bodyColor w-[90%] h-[40px] rounded-[5px] mb-[15px]"
+            type="email"
+            placeholder=" Email"
+            name="email"
+          />
+          <input
+            class="password bg-bodyColor w-[90%] h-[40px] rounded-[5px] mb-[15px]"
             type="password"
             placeholder=" Password"
             name="password"
           />
           <input
-            class="signinbutton"
+            class="signinbutton bg-primary w-[92%] h-[35px] rounded-[5px] text-white"
             type="submit"
             name="sign in"
             value="Login"
           />
           <p class="signuplink">
-            New to CodeCLA? <a href="/signup.html">Signup</a>
+            New to CLA? <a class="text-primary" href="/signup.html">Signup</a>
           </p>
         </div>
       </div>
     </section>
-
-    <style>
-      .signincontainer {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        gap: 5px;
-        width: 100%;
-        grid-template-areas: "codingimage logincontainer";
-        height: 100%;
-        background-image: url("/Images/bg.svg");
-        font-family: Martel Sans, sans-serif;
-        background-color: #f4f4f4;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-        border-top-color: #23155b;
-        border-right-color: #f4f4f4;
-        border-bottom-color: #f4f4f4;
-        border-style: solid;
-      }
-
-      .codingimage {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #23155b;
-        height: 690px;
-      }
-      .codingavatar {
-        height: 275px;
-      }
-
-      .logincontainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 5px;
-      }
-
-      .logincart {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: white;
-        height: 350px;
-        width: 350px;
-        padding: 10px 10px 10px 10px;
-      }
-
-      .headercoder {
-        color: #8053ff;
-      }
-
-      .email {
-        background-color: #23155b;
-        width: 90%;
-        height: 40px;
-        border-radius: 5px;
-        margin-bottom: 15px;
-      }
-
-      .password {
-        background-color: #23155b;
-        width: 90%;
-        height: 40px;
-        border-radius: 5px;
-        margin-bottom: 15px;
-      }
-
-      .signinbutton {
-        background-color: #8053ff;
-        width: 92%;
-        height: 35px;
-        border-radius: 5px;
-        color: white;
-      }
-    </style>
   </body>
 </html>

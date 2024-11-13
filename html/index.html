@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <header>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="feedback" content="" />
@@ -22,12 +22,54 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "selector",
+        theme: {
+          screens: {
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+            "2xl": "1536px",
+          },
+          extend: {
+            container: {
+              center: true,
+            },
+            colors: {
+              primary: "#8053FF",
+              bodyColor: "#23155B",
+              grey: "#817d8e",
+              white: "white",
+              BackgroundColor: "#f4f4f4",
+            },
+            fontFamiliy: {
+              sans: ["Martel Sans", "sans-serif"],
+              Alternative: ["Noto Sans Khojki"],
+            },
+            fontSize: {
+              sm: "14px",
+              p: "18px",
+              h3: "28px",
+              h2: ["34px", "50px"],
+              h1: ["48px", "60px"],
+            },
+          },
+        },
+      };
+    </script>
     <title>CLA, the place for Competitive Programmers</title>
-  </head>
+  </header>
 
-  <body>
-    <header class="navbar">
-      <div class="logo">
+  <body
+    class="container overflow-x-hidden w-full bg-[url('/Images/bg.svg')] font-sans bg-gray-100 bg-no-repeat bg-fixed bg-[length:100%_100%] text-bodyColor"
+  >
+    <header class="navbar flex flex-row mx-[70px] mr-[105px]">
+      <div
+        class="logo flex flex-row justify-start items-center h-[80px] w-full"
+      >
         <svg
           width="53"
           height="60"
@@ -50,52 +92,88 @@
         </svg>
         <p>CodeCLA</p>
       </div>
-      <div class="navcoder">
+      <div
+        class="navcoder flex flex-col md:flex-row justify-end items-center gap-[10px] h-auto md:h-[80px] w-full"
+      >
         <a href="https://codelabsacademy.com/">For Coders</a>
         <a href="https://codelabsacademy.com/">For Developers</a>
-        <input class="button1" type="submit" name="join now" value="Join now" />
+        <button
+          class="button1 bg-primary text-white rounded-[10%] border border-primary p-[5px] hover:bg-gray-100 hover:text-primary"
+        >
+          Join Now
+        </button>
       </div>
     </header>
-    <section class="herosection">
-      <h2>The place for Competitive Programmers</h2>
+    <section class="herosection m-20 flex flex-col justify-center items-center">
+      <h2 class="text-h2 font-bold">The place for Competitive Programmers</h2>
       <p>
         CodeCLA is where programmers participate in programming contests, solve
         algorithm and data strucuture challenges and become a part of an awesome
         community.
       </p>
-      <div>
+      <div class="flex flex-col md:flex-row gap-4">
         <input
-          class="button1"
+          class="button1 bg-primary text-white rounded-[10%] border border-primary p-[5px] hover:bg-gray-100 hover:text-primary w-full md:w-auto"
           type="submit"
           name="become a coder"
           value="Become a coder"
         />
         <input
-          class="button2"
+          class="button2 text-primary bg-gray-100 rounded-[10%] border border-primary p-[5px] hover:bg-primary hover:text-white w-full md:w-auto"
           type="submit"
           name="become a manager"
           value="Become a manager"
         />
       </div>
     </section>
-    <section class="grid">
-      <h2 style="color: #8053ff">Practice to level-up</h2>
-      <div class="grid1">
-        <div class="practice">1k for practice</div>
-        <div class="coder">100+ Coders</div>
-        <div class="programming">10 programming languages</div>
-        <div class="submissions">130k Submissions</div>
+    <section
+      class="flex flex-col justify-center items-center m-[100px_80px_170px_80px]"
+    >
+      <h2 class="text-primary font-bold text-h3">Practice to level-up</h2>
+      <div
+        class="grid1 grid grid-cols-1 md:grid-cols-2 grid-rows-2 justify-items-center gap-3 h-auto md:h-24 bg-gray-100"
+      >
+        <div
+          class="practice bg-white flex flex-col justify-center items-center rounded-lg w-72 h-16 p-5 hover:bg-purple-500/10"
+        >
+          1k for practice
+        </div>
+        <div
+          class="coder bg-white flex flex-col justify-center items-center rounded-lg w-72 h-16 p-5 hover:bg-purple-500/10"
+        >
+          100+ Coders
+        </div>
+        <div
+          class="programming bg-white flex flex-col justify-center items-center rounded-lg w-72 h-16 p-5 mt-5 hover:bg-purple-500/10"
+        >
+          10 programming languages
+        </div>
+        <div
+          class="submissions bg-white flex flex-col justify-center items-center rounded-lg w-72 h-20 px-10 pt-10 pb-10 mt-5 hover:bg-purple-500/10"
+        >
+          130k Submissions
+        </div>
       </div>
     </section>
-    <section class="forcoders">
-      <h3 style="color: #8053ff">For coders</h3>
-      <h1>What you will <b style="color: #8053ff">gain</b></h1>
+    <section class="forcoders mt-5 mr-20 mb-12 ml-5 pb-20">
+      <h3
+        class="text-primary font-bold text-h3 text-xs sm:text-base overflow-hidden"
+      >
+        For coders
+      </h3>
+      <h1 class="font-bold text-h1">
+        What you will <b class="text-primary">gain</b>
+      </h1>
       <p>
         You are a coder who wants to level up his skills in coding and problem
         solving? Here is what we provide
       </p>
-      <div class="grid2">
-        <div class="practice2">
+      <div
+        class="grid2 grid grid-cols-1 md:grid-cols-2 gap-3 h-auto md:h-24 bg-gray-100 mb-10"
+      >
+        <div
+          class="practice2 flex flex-row justify-start items-start rounded-lg border border-gray-400 p-5 hover:bg-purple-500/10"
+        >
           <svg
             width="24"
             height="24"
@@ -115,7 +193,9 @@
           Rich practice set of problems Access a rich library of practice
           problems, algorithm, and data strucutres to enhance your skills
         </div>
-        <div class="contests">
+        <div
+          class="contests flex flex-row justify-start items-start rounded-lg border border-gray-400 p-5 hover:bg-purple-500/10"
+        >
           <svg
             width="24"
             height="24"
@@ -135,7 +215,9 @@
           Universal contests Compete in regularly scheduled contests against top
           talent from around the globe
         </div>
-        <div class="feedback">
+        <div
+          class="feedback flex flex-row justify-start items-start rounded-lg border border-gray-400 p-5 hover:bg-purple-500/10"
+        >
           <svg
             width="24"
             height="24"
@@ -155,7 +237,9 @@
           Constant feedback Receive personalized insights and feedback to
           improve your problem-solving abilities
         </div>
-        <div class="sharing">
+        <div
+          class="sharing flex flex-row justify-start items-start rounded-lg border border-gray-400 p-5 hover:bg-purple-500/10"
+        >
           <svg
             width="24"
             height="24"
@@ -176,7 +260,9 @@
           Sharing is caring Connect with like-minded individuals, form teams,
           and tackle challenges together
         </div>
-        <div class="progress">
+        <div
+          class="progress flex flex-row justify-start items-start rounded-lg border border-gray-400 p-5 hover:bg-purple-500/10"
+        >
           <svg
             width="24"
             height="24"
@@ -195,7 +281,9 @@
           </svg>
           Track your progress and climb the ranks on our leaderboard
         </div>
-        <div class="detailed">
+        <div
+          class="detailed flex flex-row justify-start items-start rounded-lg border border-gray-400 p-5 hover:bg-purple-500/10"
+        >
           <svg
             width="24"
             height="24"
@@ -216,20 +304,28 @@
         </div>
       </div>
       <input
-        class="button1"
+        class="button1 bg-primary text-white rounded-[10%] border border-primary p-[5px] mt-36 hover:bg-gray-100 hover:text-primary"
         type="submit"
         name="join now"
         value="Join coders community"
       />
     </section>
-    <section class="formanagers">
-      <h3 style="color: #8053ff">For managers</h3>
-      <h1>
-        Access <b style="color: #8053ff">high-professional</b> platform for
-        coding challenges design
+    <section class="formanagers mt-5 mr-20 mb-12 ml-5 pb-20">
+      <h3
+        class="text-primary font-bold text-h3 text-xs sm:text-base overflow-hidden"
+      >
+        For managers
+      </h3>
+      <h1 class="text-h2 font-bold">
+        Access <b class="text-primary">high-professional</b> platform for coding
+        challenges design
       </h1>
-      <div class="grid3">
-        <div class="tailored">
+      <div
+        class="grid3 grid grid-cols-1 md:grid-cols-2 gap-3 h-auto md:h-24 bg-gray-100 mb-16"
+      >
+        <div
+          class="tailored flex flex-row justify-start items-start rounded-lg border border-gray-400 p-5 hover:bg-purple-500/10"
+        >
           <svg
             width="24"
             height="24"
@@ -249,7 +345,9 @@
           Craft tailored coding challenges suited to your specific needs and
           objectives
         </div>
-        <div class="challenges">
+        <div
+          class="challenges flex flex-row justify-start items-start rounded-lg border border-gray-400 p-5 hover:bg-purple-500/10"
+        >
           <svg
             width="24"
             height="24"
@@ -268,7 +366,9 @@
           </svg>
           Design challenges that align perfectly with your recruitment critteria
         </div>
-        <div class="problemtypes">
+        <div
+          class="problemtype flex flex-row justify-start items-start rounded-lg border border-gray-400 p-5 hover:bg-purple-500/10"
+        >
           <svg
             width="24"
             height="24"
@@ -288,7 +388,9 @@
           Choose from a wide range of problem types including algorithmeic, data
           strucutes, puzzles, and more
         </div>
-        <div class="ergonomic">
+        <div
+          class="ergonomic flex flex-row justify-start items-start rounded-lg border border-gray-400 p-5 hover:bg-purple-500/10"
+        >
           <svg
             width="24"
             height="24"
@@ -307,7 +409,9 @@
           </svg>
           Ergonomic tools for challenges design
         </div>
-        <div class="collaborates">
+        <div
+          class="collaborates flex flex-row justify-start items-start rounded-lg border border-gray-400 p-5 hover:bg-purple-500/10"
+        >
           <svg
             width="24"
             height="24"
@@ -327,7 +431,9 @@
           Collaborates with colleagues or peers in creating and refining coding
           challenges
         </div>
-        <div class="support">
+        <div
+          class="support flex flex-row justify-start items-start rounded-lg border border-gray-400 p-5 hover:bg-purple-500/10"
+        >
           <svg
             width="24"
             height="24"
@@ -348,16 +454,24 @@
         </div>
       </div>
       <input
-        class="button1"
+        class="button1 bg-primary text-white rounded-[10%] border border-primary p-[5px] mt-36 hover:bg-gray-100 hover:text-primary"
         type="submit"
         name="join now"
         value="Join coders community"
       />
     </section>
-    <section class="CLA">
-      <div class="hub">
-        <img class="team" src="/Images/team.svg" alt="hard working people" />
-        <div class="rightbody">
+    <section
+      class="CLA m-[20px_80px_30px_20px] text-xs sm:text-base overflow-hidden"
+    >
+      <div
+        class="hub grid grid-cols-1 md:grid-cols-[450px_1fr] grid-rows-1 pt-10 gap-[5px] w-full"
+      >
+        <img
+          class="team rounded-tr-[125px] rounded-br-[125px] pb-2 w-full md:w-[400px]"
+          src="/Images/team.svg"
+          alt="hard working people"
+        />
+        <div class="rightbody m-20 flex flex-col justify-start items-start">
           <svg
             class="logo2"
             width="53"
@@ -380,7 +494,7 @@
             />
           </svg>
           <div class="header">
-            <h2>Brought to you by CLA</h2>
+            <h2 class="text-h3 font-bold mt-10 mb-10">Brought to you by CLA</h2>
             <p class="ultimate hub">
               Join the ultimate Hub for Competitive Programmers and reach growth
               and excellence in competitive programming. Coding challenges is
@@ -391,12 +505,22 @@
         </div>
       </div>
     </section>
-    <div class="swiper">
-      <h2 class="testheader">Testimonials</h2>
+    <div
+      class="swiper w-full md:w-[30%] h-[30%] text-xs sm:text-base overflow-hidden"
+    >
+      <h2
+        class="testheader text-primary flex flex-row justify-center pt-[10px] text-h2 font-bold"
+      >
+        Testimonials
+      </h2>
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <div class="slides">
-            <p class="testparagraph">
+          <div
+            class="slides flex flex-col justify-center items-center text-center bg-white h-[450px] rounded-[10%]"
+          >
+            <p
+              class="testparagraph px-[50px] text-center text-xs sm:text-base overflow-hidden"
+            >
               This platform is an absolute game-changer for competitive
               programmers. The extensive range of problems and challenges
               offered here truly hones your skills and prepares you for any
@@ -405,11 +529,13 @@
               prowess."
             </p>
             <img
-              class="imgjune"
+              class="imgjune rounded-[30px] h-[50px] grayscale"
               src="https://randomuser.me/api/portraits/women/44.jpg"
               alt="June Cha headshot"
             />
-            <p class="testname">
+            <p
+              class="testname flex flex-col justify-center items-center text-center"
+            >
               June Cha
               <br />
               Software Engineer
@@ -417,8 +543,12 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="slides">
-            <p class="testparagraph">
+          <div
+            class="slides flex flex-col justify-center items-center text-center bg-white h-[450px] rounded-[10%]"
+          >
+            <p
+              class="testparagraph px-[50px] text-center text-xs sm:text-base overflow-hidden"
+            >
               "I can't express enough how valuable this platform has been for
               me. As someone deeply passionate about algorithms and data
               structures, I've found the diverse set of problems here both
@@ -427,11 +557,13 @@
               problem-solving skills."
             </p>
             <img
-              class="imgjune"
+              class="imgjune rounded-[30px] h-[50px] grayscale"
               src="https://randomuser.me/api/portraits/women/67.jpg"
               alt="Iida Niskanen headshot"
             />
-            <p class="testname">
+            <p
+              class="testname flex flex-col justify-center items-center text-center"
+            >
               Iida Niskanen
               <br />
               Data Engineer
@@ -439,8 +571,12 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="slides">
-            <p class="testparagraph">
+          <div
+            class="slides flex flex-col justify-center items-center text-center bg-white h-[450px] rounded-[10%]"
+          >
+            <p
+              class="testparagraph px-[50px] text-center text-xs sm:text-base overflow-hidden"
+            >
               "If you're serious about excelling in competitive coding, look no
               further. This platform not only provides a comprehensive set of
               problems but also fosters a supportive community where you can
@@ -448,11 +584,13 @@
               journey towards becoming a better competitive coder."
             </p>
             <img
-              class="imgjune"
+              class="imgjune rounded-[30px] h-[50px] grayscale"
               src="https://randomuser.me/api/portraits/women/8.jpg"
               alt="Renee Sims headshot"
             />
-            <p class="testname">
+            <p
+              class="testname flex flex-col justify-center items-center text-center"
+            >
               Renee Sims
               <br />
               Cloud Engineer
@@ -460,8 +598,12 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="slides">
-            <p class="testparagraph">
+          <div
+            class="slides flex flex-col justify-center items-center text-center bg-white h-[450px] rounded-[10%]"
+          >
+            <p
+              class="testparagraph px-[50px] text-center text-xs sm:text-base overflow-hidden"
+            >
               "I've tried numerous competitive programming platforms, but none
               come close to the quality and depth offered here. From
               beginner-friendly challenges to advanced algorithmic puzzles,
@@ -470,12 +612,14 @@
               choice for honing my coding skills."
             </p>
             <img
-              class="imgjune"
+              class="imgjune rounded-[30px] h-[50px] grayscale"
               src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?h=3
               50&auto=compress&cs=tinysrgb"
               alt="Sasha Ho headshot"
             />
-            <p class="testname">
+            <p
+              class="testname flex flex-col justify-center items-center text-center"
+            >
               Renee Sims
               <br />
               Phd student
@@ -483,8 +627,12 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="slides">
-            <p class="testparagraph">
+          <div
+            class="slides flex flex-col justify-center items-center text-center bg-white h-[450px] rounded-[10%]"
+          >
+            <p
+              class="testparagraph px-[50px] text-center text-xs sm:text-base overflow-hidden"
+            >
               "As a seasoned programmer, I'm always on the lookout for platforms
               that challenge and inspire me. This platform exceeds all
               expectations with its vast array of problems and unparalleled
@@ -493,11 +641,13 @@
               elevate your skills."
             </p>
             <img
-              class="imgjune"
+              class="imgjune rounded-[30px] h-[50px] grayscale"
               src="https://randomuser.me/api/portraits/men/97.jpg"
               alt="Veeti Seppanen headshot"
             />
-            <p class="testname">
+            <p
+              class="testname flex flex-col justify-center items-center text-center"
+            >
               Veeti Seppanen
               <br />
               Frontend developer
@@ -511,13 +661,16 @@
       <div class="swiper-scrollbar"></div>
     </div>
 
-    <section class="contact">
-      <div class="contactcontainer">
-        <h1>Contact us</h1>
+    <section class="contact ml-5 mr-20 h-auto text-gray-100 mt-8">
+      <div
+        class="contactcontainer bg-bodyColor rounded-tl-[100px] h-auto p-4 md:pl-[50px] md:py-5"
+      >
+        <h1 class="text-h3">Contact us</h1>
         <form action="">
           <div>
             <p>Name</p>
             <input
+              class="text-black mb-3"
               type="name"
               id="name"
               placeholder="Your Name"
@@ -529,6 +682,7 @@
           <p>Email</p>
           <div>
             <input
+              class="text-black mb-5"
               type="email"
               id="email"
               placeholder="Email"
@@ -539,6 +693,7 @@
           </div>
           <div>
             <textarea
+              class="text-black mb-3"
               id="textbox"
               placeholder="Your Message"
               name="Your Message"
@@ -549,610 +704,19 @@
           </div>
           <input
             onclick="checkForm(event)"
-            class="button1"
+            class="button1 bg-primary text-white rounded-[10%] border border-primary p-[5px] hover:bg-gray-100 hover:text-primary"
             type="submit"
             name="Submit"
             value="Submit"
           />
         </form>
       </div>
-      <div class="footer">
+      <div
+        class="footer flex flex-row justify-center bg-bodyColor pb-[3px] text-white"
+      >
         &#169;<span id="currentYear"> </span> Your Competitive Programming
         Platform. All rights reserved.
       </div>
     </section>
-
-    <style>
-      body {
-        background-image: url("/Images/bg.svg");
-        font-family: Martel Sans, sans-serif;
-        background-color: #f4f4f4;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-        color: #23155b;
-      }
-
-      .navbar {
-        display: flex;
-        flex-direction: row;
-        background-color: #f4f4f4;
-        margin: 0px 170px 0px 170px;
-        padding-top: 0px 0px 0px 0px;
-      }
-
-      .logo {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        height: 80px;
-        width: 100%;
-      }
-
-      .navcoder {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 10px;
-        height: 80px;
-        width: 100%;
-      }
-
-      .button1 {
-        background-color: #8053ff;
-        color: white;
-        border-radius: 10%;
-        border-color: #8053ff;
-        padding: 5px 5px 5px 5px;
-      }
-
-      .herosection {
-        margin: 100px 80px 100px 80px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .button2 {
-        color: #8053ff;
-        background-color: #f4f4f4;
-        border-radius: 10%;
-        border-color: #8053ff;
-        padding: 5px 5px 5px 5px;
-      }
-
-      .button1:hover {
-        background-color: #f4f4f4;
-        color: #8053ff;
-      }
-
-      .button2:hover {
-        background-color: #8053ff;
-        color: white;
-      }
-      .grid {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 100px 80px 170px 80px;
-      }
-      .grid1 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        justify-items: center;
-        gap: 15px;
-        height: 80px;
-        box-shadow: rgba(0, 0, 0, 0);
-        background-color: #f4f4f4;
-        height: 100px;
-      }
-
-      .practice {
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        width: 300px;
-        height: 60px;
-        box-shadow: rgba(0, 0, 0, 0);
-        padding: 5px 5px 5px 5px;
-      }
-
-      .practice:hover {
-        background-color: hsl(256, 100%, 66%, 0.1);
-      }
-
-      .coder {
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        width: 300px;
-        height: 60px;
-        box-shadow: rgba(0, 0, 0, 0);
-        padding: 5px 5px 5px 5px;
-      }
-
-      .coder:hover {
-        background-color: hsl(256, 100%, 66%, 0.1);
-      }
-
-      .programming {
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        width: 300px;
-        height: 60px;
-        box-shadow: rgba(0, 0, 0, 0);
-        padding: 5px 5px 5px 5px;
-      }
-
-      .programming:hover {
-        background-color: hsl(256, 100%, 66%, 0.1);
-      }
-
-      .submissions {
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        width: 300px;
-        height: 80px;
-        box-shadow: rgba(0, 0, 0, 0);
-        padding: 10px 10px 20px 10px;
-      }
-
-      .submissions:hover {
-        background-color: hsl(256, 100%, 66%, 0.1);
-      }
-
-      .forcoders {
-        margin-left: 20px;
-        margin-bottom: 30px;
-      }
-
-      .grid2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 20px;
-        height: 80px;
-        box-shadow: rgba(0, 0, 0, 0);
-        background-color: #f4f4f4;
-        margin-bottom: 100px;
-      }
-
-      .practice2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0);
-        border: 1px solid gray;
-        border-width: 1px;
-        padding: 5px 5px 5px 5px;
-      }
-
-      .practice2:hover {
-        background-color: hsl(256, 100%, 66%, 0.1);
-      }
-
-      .contests {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0);
-        border: 1px solid gray;
-        border-width: 1px;
-        padding: 5px 5px 5px 5px;
-      }
-
-      .contests:hover {
-        background-color: hsl(256, 100%, 66%, 0.1);
-      }
-
-      .feedback {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0);
-        border: 1px solid gray;
-        border-width: 1px;
-        padding: 5px 5px 5px 5px;
-      }
-
-      .feedback:hover {
-        background-color: hsl(256, 100%, 66%, 0.1);
-      }
-
-      .progress {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0);
-        border: 1px solid gray;
-        border-width: 1px;
-        padding: 5px 5px 5px 5px;
-      }
-
-      .progress:hover {
-        background-color: hsl(256, 100%, 66%, 0.1);
-      }
-
-      .sharing {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0);
-        border: 1px solid gray;
-        border-width: 1px;
-        padding: 5px 5px 5px 5px;
-      }
-
-      .sharing:hover {
-        background-color: hsl(256, 100%, 66%, 0.1);
-      }
-
-      .detailed {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0);
-        border: 1px solid gray;
-        border-width: 1px;
-        padding: 5px 5px 5px 5px;
-      }
-
-      .detailed:hover {
-        background-color: hsl(256, 100%, 66%, 0.1);
-      }
-
-      .forcoders {
-        margin: 20px 80px 30px 20px;
-      }
-
-      .formanagers {
-        margin: 20px 80px 30px 20px;
-      }
-
-      .grid3 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 20px;
-        height: 80px;
-        box-shadow: rgba(0, 0, 0, 0);
-        background-color: #f4f4f4;
-        margin-bottom: 100px;
-      }
-
-      .tailored {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0);
-        border: 1px solid gray;
-        border-width: 1px;
-        padding: 5px 5px 5px 5px;
-      }
-
-      .tailored:hover {
-        background-color: hsl(256, 100%, 66%, 0.1);
-      }
-
-      .challenges {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0);
-        border: 1px solid gray;
-        border-width: 1px;
-        padding: 5px 5px 5px 5px;
-      }
-
-      .challenges:hover {
-        background-color: hsl(256, 100%, 66%, 0.1);
-      }
-
-      .problemtypes {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0);
-        border: 1px solid gray;
-        border-width: 1px;
-        padding: 5px 5px 5px 5px;
-      }
-
-      .problemtypes:hover {
-        background-color: hsl(256, 100%, 66%, 0.1);
-      }
-
-      .ergonomic {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0);
-        border: 1px solid gray;
-        border-width: 1px;
-        padding: 5px 5px 5px 5px;
-      }
-
-      .ergonomic:hover {
-        background-color: hsl(256, 100%, 66%, 0.1);
-      }
-
-      .collaborates {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0);
-        border: 1px solid gray;
-        border-width: 1px;
-        padding: 5px 5px 5px 5px;
-      }
-
-      .collaborates:hover {
-        background-color: hsl(256, 100%, 66%, 0.1);
-      }
-
-      .support {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0);
-        border: 1px solid gray;
-        border-width: 1px;
-        padding: 5px 5px 5px 5px;
-      }
-
-      .support:hover {
-        background-color: hsl(256, 100%, 66%, 0.1);
-      }
-
-      .CLA {
-        margin: 20px 80px 30px 20px;
-      }
-
-      .hub {
-        display: grid;
-        grid-template-columns: 450px 1fr;
-        grid-template-rows: 1fr;
-        padding-top: 40px;
-        gap: 5px;
-        width: 100%;
-        grid-template-areas: "team header ultimatehub";
-      }
-
-      .team {
-        border-top-right-radius: 125px;
-        border-bottom-right-radius: 125px;
-        padding-bottom: 8px;
-        width: 400px;
-      }
-
-      .testimonials {
-        margin: 20px 80px 30px 20px;
-        background-color: #f4f4f4;
-      }
-
-      .testheader {
-        color: #8053ff;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        padding-top: 10px;
-      }
-
-      .testiblock {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        background-color: white;
-        margin-left: 270px;
-        margin-right: 270px;
-      }
-
-      .testparagraph {
-        padding-left: 50px;
-        padding-right: 50px;
-        text-align: center;
-      }
-
-      .testname {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-
-      .imgjune {
-        border-radius: 30px;
-        height: 50px;
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-      }
-
-      .contact {
-        margin-left: 20px;
-        margin-right: 80px;
-        height: auto;
-        color: #f4f4f4;
-        margin-top: 30px;
-      }
-
-      .contactcontainer {
-        background-color: #23155b;
-        border-top-left-radius: 100px;
-        height: auto;
-        padding-left: 50px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-
-      .footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        background-color: #23155b;
-        padding-bottom: 3px;
-        color: white;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        overflow-x: hidden;
-        width: 100%;
-      }
-
-      .swiper {
-        width: 30%;
-        height: 30%;
-      }
-
-      .slides {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-color: white;
-        height: 450px;
-        border-radius: 10%;
-      }
-
-      @media screen and (max-width: 768px) {
-        .forcoders,
-        .formanagers,
-        .CLA,
-        .swiper,
-        .testparagraph {
-          font-size: x-small;
-          white-space: pre-line;
-          word-wrap: break-word;
-          overflow: hidden;
-        }
-        .contact {
-          margin: 20px;
-        }
-
-        .grid1,
-        .grid2,
-        .grid3 {
-          grid-template-columns: 1fr;
-          height: auto;
-          margin: 20px 0;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-
-        body {
-          overflow-x: hidden;
-          width: 100%;
-        }
-
-        .swiper {
-          width: 30%;
-          height: 30%;
-        }
-
-        .slides {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          background-color: white;
-          height: 450px;
-          border-radius: 10%;
-        }
-
-        .practice,
-        .coder,
-        .programming,
-        .submissions {
-          width: auto;
-          height: auto;
-          min-height: 60px;
-        }
-
-        .testiblock {
-          margin: 20px;
-          padding: 20px;
-        }
-
-        .contactcontainer {
-          height: auto;
-          padding: 20px;
-        }
-
-        .hub {
-          grid-template-columns: 1fr;
-          width: auto;
-        }
-
-        .team {
-          width: 100%;
-          max-width: 100%;
-        }
-
-        .herosection div {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-        }
-
-        .button1,
-        .button2 {
-          width: 100%;
-          margin: 5px 0;
-        }
-      }
-    </style>
   </body>
 </html>
